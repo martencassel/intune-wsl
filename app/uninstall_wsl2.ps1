@@ -1,9 +1,8 @@
 try {
     $LogPath = "C:\temp\wsl2_install.log"
     Start-Transcript -Path $LogPath -Append
-    # Please use powershell instead
-    Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart
     Disable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart
+    Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart
     exit 1641
 } catch {
     Write-Error "Failed to uninstall WSL2: $_"
