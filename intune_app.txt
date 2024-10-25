@@ -1,0 +1,45 @@
+* Add App
+
+----------------------------------------------------------
+App Information:
+----------------------------------------------------------
+Select file: install_wsl2.intunewin
+Name: Install WSL2
+Description: Installs WSL2
+Publisher: Marten
+Show this as a featured app in the Company Portal: No
+
+----------------------------------------------------------
+Program:
+----------------------------------------------------------
+Install Command: powershell.exe -ExecutionPolicy Bypass -File install_wsl2.ps1
+Uninstall Command: powershell.exe -ExecutionPolicy Bypass -File uninstall_wsl2.ps1
+Install time required (mins): 60
+Allow available uninstall: Yes
+Install behaviour: System
+Device restart behaviour: App install may force a device restart
+Specify return codes to indicate post-installation behavior:
+
+Return Code     Code Type
+0               Success
+1707            Success
+3010            Soft reboot
+1641            Hard reboot
+1618            Retry
+
+----------------------------------------------------------
+Requirements
+----------------------------------------------------------
+OS Architecture: 64-bit
+Minimum operating system: Windows 10 2004
+
+----------------------------------------------------------
+Detection Rules
+----------------------------------------------------------
+Rules format: Use a custom detection script
+Script file: detect_wsl2_install.ps1
+
+----------------------------------------------------------
+Dependencies
+----------------------------------------------------------
+Here we could another dependency.... (Say WSL Distro Image depends on WSL Subsystem)
