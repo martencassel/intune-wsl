@@ -6,7 +6,7 @@ try {
     Disable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart
     exit 1641
 } catch {
-    Write-Error "Failed to uninstall WSL2"
+    Write-Error "Failed to uninstall WSL2: $_"
     exit 1
 } finally {
     Stop-Transcript -ErrorAction SilentlyContinue
