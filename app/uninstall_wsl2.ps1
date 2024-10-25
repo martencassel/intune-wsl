@@ -1,7 +1,6 @@
 try {
     $LogPath = "C:\temp\wsl2_install.log"
     Start-Transcript -Path $LogPath -Append
-
     dism.exe /online /disable-feature /featurename:Microsoft-Windows-Subsystem-Linux /norestart
     dism.exe /online /disable-feature /featurename:VirtualMachinePlatform /norestart
     exit 1641
