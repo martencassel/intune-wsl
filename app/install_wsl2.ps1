@@ -2,9 +2,8 @@
 try {
     $LogPath = "C:\temp\wsl2_install.log"
     Start-Transcript -Path $LogPath -Append
-
-    dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-    dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -All -NoRestart
+    Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -All -NoRestart
     exit 1641
 } catch {
     Write-Error "Failed to install WSL2"
