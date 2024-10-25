@@ -11,9 +11,8 @@ try {
     $wslFeature = Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
     $vmPlatformFeature = Get-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 
-    $wslFeature
-
-    $vmPlatformFeature
+    Write-Host $wslFeature
+    Write-Host $vmPlatformFeature
 
     $wslInstalled = $false
     $vmPlatformInstalled = $false
