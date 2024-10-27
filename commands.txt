@@ -1,3 +1,14 @@
 %windir%\system32\WindowsPowerShell\v1.0\powershell.exe
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+
+%windir%\system32\WindowsPowerShell\v1.0\powershell.exe
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all
+
+sfc /scannow
+
+%windir%\system32\WindowsPowerShell\v1.0\powershell.exe
+dism.exe /online /disable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+%windir%\system32\WindowsPowerShell\v1.0\powershell.exe
+dism.exe /online /disable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all
+
