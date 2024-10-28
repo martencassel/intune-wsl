@@ -38,7 +38,8 @@ try {
         Write-Output "WSL2 is not installed or not configured correctly."
         exit 1
     }
-
+    
+    exit 1
 } catch {
     Write-Error "Failed to detect WSL2 installation: $_"
     exit 1
