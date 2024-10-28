@@ -48,9 +48,6 @@ try {
     # WSL1 support
     Disable-Feature -FeatureName Microsoft-Windows-Subsystem-Linux
 
-    # WSL2 support
-    Disable-Feature -FeatureName
-
     # WSL2  uninstall, requires admin privileges.
     Run-Command "wsl --uninstall"
   
