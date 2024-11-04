@@ -13,6 +13,8 @@ try {
         # Failure
         exit 1
     }
+    Write-Host "install.ps1: Asking intune for a soft-reboot"
+    exit 3010
 } catch {
     Write-Error "catch: An error occurred: $_"
     # Failure
