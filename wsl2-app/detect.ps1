@@ -1,5 +1,5 @@
-Write-Host "wsl2-app.detect.ps1: Sleeping for 20 seconds..."
-Start-Sleep -Seconds 10
+Write-Host "wsl2-app.detect.ps1: Sleeping for 5 seconds..."
+Start-Sleep -Seconds 5
 
 if (wsl --status) {
     Write-Host "wsl --status, WSL2 is installed."

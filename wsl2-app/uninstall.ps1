@@ -1,8 +1,9 @@
-Write-Host "wsl2-app.uninstall.ps1: Sleeping for 20 seconds..."
-Start-Sleep -Seconds 20
+Write-Host "wsl2-app.uninstall.ps1: Sleeping for 5 seconds..."
+Start-Sleep -Seconds 5
 
 try {
-    Write-Host "Attempting to uninstall WSL..."
+    Write-Host "Attempting to uninstall WSL..." 
+    # Will prompt for 60 seconds and exit.
     wsl --uninstall
     if ($LASTEXITCODE -eq 0) {
         Write-Host "WSL uninstallation completed successfully."

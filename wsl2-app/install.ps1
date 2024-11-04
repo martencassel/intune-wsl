@@ -1,9 +1,9 @@
-Write-Host "wsl2-app.install.ps1: Sleeping for 20 seconds..."
+Write-Host "wsl2-app.install.ps1: Sleeping for 5 seconds..."
 
 try {
-    Start-Sleep -Seconds 20
+    Start-Sleep -Seconds 5
     Write-Host "Attempting to install WSL..."
-    wsl --install
+    wsl --install --no-distribution
     if ($LASTEXITCODE -eq 0) {
         Write-Host "wsl --install, WSL installation completed successfully."
         # Success
