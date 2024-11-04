@@ -5,7 +5,7 @@ Start-Sleep -Seconds 5
 try {
     Write-Host "Attempting to uninstall WSL..." 
     # Will prompt for 60 seconds and exit.
-    c:\windows\system32\wsl.exe --uninstall
+    & "c:\windows\system32\wsl.exe" --uninstall
     if ($LASTEXITCODE -eq 0) {
         Write-Host "WSL uninstallation completed successfully."
         exit 0
